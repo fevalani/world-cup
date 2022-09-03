@@ -30,6 +30,7 @@ export default function App() {
       }
     }
     if (counter === 8) {
+      setTimeout(() => window.scrollTo(0, 600), 500);
       return true;
     } else {
       return false;

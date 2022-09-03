@@ -9,13 +9,13 @@ body {
     linear-gradient(
       177deg,
       rgba(145, 15, 48, 1) 0%,
-      rgba(149, 19, 52, 1) 70%,
+      rgba(165, 17, 62, 1) 60%,
       rgba(0, 0, 0, 1) 100%
     );
   background-repeat: repeat-x, no-repeat;
   background-size: 100% 360px, contain;
   background-position: fixed, center;
-  background-attachment: scroll, fixed;
+  background-attachment: fixed, fixed;
   transform: rotate(30);
 }
 
