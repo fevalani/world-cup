@@ -14,7 +14,7 @@ export default function Keying({ classified }) {
     <Margin>
       <Title>Quem será o grande Campeão?</Title>
       <Container>
-        <Final apear={champion[0].name && champion[1].name}>
+        <Final apear={champion[0].name && third[0].name}>
           <img src={cup} alt={"taça"} />
           <div>
             <div id="title">Campeão!!</div>

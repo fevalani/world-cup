@@ -92,7 +92,7 @@ const Position = styled.div`
       ${(props) =>
         props.exists
           ? props.classified
-            ? `61, 215, 66, 0.9`
+            ? `23, 145, 31, 0.9`
             : `255, 0, 0, 0.9`
           : `255, 255, 255, 0.5`}
     );
@@ -118,7 +118,7 @@ const Position = styled.div`
   }
 
   #team {
-    color: ${(props) => (props.classified && props.exists ? `#3dd742` : `white`)};
+    color: ${(props) => (props.classified && props.exists ? `#17911F` : `white`)};
   }
 
   #flag {

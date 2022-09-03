@@ -42,7 +42,11 @@ export default function App() {
         <img id="image" src={cuplogo} alt="logo" />
         <img id="image" src={logo} alt="logo" />
       </Logos>
-      <GroupGrid setClassified={setClassified} classified={classified}></GroupGrid>
+      <GroupGrid
+        classifyTeamIsComplete={classifyTeamIsComplete()}
+        setClassified={setClassified}
+        classified={classified}
+      ></GroupGrid>
       {classifyTeamIsComplete() ? <Keying classified={classified}></Keying> : ""}
     </Container>
   );
@@ -51,6 +55,7 @@ export default function App() {
 const Container = styled.div`
   width: 100%;
   height: 100vh;
+  min-width: 1000px;
 
   display: flex;
   flex-direction: column;
