@@ -5,9 +5,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-image: url(../images/background.jpg);
-  background-position: center;
-  background-size: repeat;
+  background: url(../images/background.jpg),
+    linear-gradient(
+      177deg,
+      rgba(145, 15, 48, 1) 0%,
+      rgba(149, 19, 52, 1) 70%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  background-repeat: repeat-x, no-repeat;
+  background-size: 100% 360px, contain;
+  background-position: fixed, center;
+  background-attachment: scroll, fixed;
+  transform: rotate(30);
 }
 
 code {
