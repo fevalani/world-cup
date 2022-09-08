@@ -53,4 +53,22 @@ const Container = styled.div`
   flex-wrap: wrap;
 
   justify-content: center;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 20px;
+
+    margin: 20px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 478px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-gap: 20px;
+
+    margin: 20px;
+    margin-bottom: 40px;
+  }
 `;

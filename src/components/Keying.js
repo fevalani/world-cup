@@ -160,6 +160,10 @@ const Container = styled.div`
     font-weight: bold;
     text-align: center;
   }
+  @media (max-width: 768px) {
+    height: 100%;
+    display: block;
+  }
 `;
 
 const Rounds = styled.div`
@@ -170,6 +174,13 @@ const Rounds = styled.div`
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    p {
+      display: none;
+    }
+  }
 `;
 const Finals = styled.div`
   width: 100%;
