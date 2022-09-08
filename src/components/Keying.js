@@ -261,4 +261,27 @@ const Final = styled.div`
 
     background-color: #b2163e;
   }
+
+  @media (max-width: 768px) {
+    align-items: center;
+    justify-content: center;
+
+    > img {
+      width: 100px;
+      height: 100px;
+    }
+
+    > div {
+      #title {
+        font-size: 50px;
+      }
+      #name {
+        font-size: 20px;
+      }
+      #flag {
+        width: 150px;
+        height: 90px;
+      }
+    }
+  }
 `;
