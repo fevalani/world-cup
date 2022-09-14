@@ -30,7 +30,11 @@ export default function App() {
       }
     }
     if (counter === 8) {
-      setTimeout(() => window.scrollTo(0, 600), 500);
+      if (window.innerWidth < 768) {
+        setTimeout(() => window.scrollTo(0, 600), 2321);
+      } else {
+        setTimeout(() => window.scrollTo(0, 600), 500);
+      }
       return true;
     } else {
       return false;

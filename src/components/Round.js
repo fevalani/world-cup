@@ -167,6 +167,10 @@ const Container = styled.div`
     font-size: 15px;
     margin: 0;
   }
+  @media (max-width: 768px) {
+    height: 140px;
+    width: 100px;
+  }
 `;
 
 const FlagTeam = styled.img`

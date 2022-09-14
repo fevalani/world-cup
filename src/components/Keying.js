@@ -142,6 +142,10 @@ const Title = styled.div`
   font-size: 25px;
   font-weight: bold;
   margin-top: 100px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 const Container = styled.div`
@@ -161,6 +165,7 @@ const Container = styled.div`
     text-align: center;
   }
   @media (max-width: 768px) {
+    width: 90%;
     height: 100%;
     display: block;
   }
@@ -176,8 +181,10 @@ const Rounds = styled.div`
   flex-direction: column;
 
   @media (max-width: 768px) {
+    width: 100%;
     flex-direction: row;
-    p {
+    margin-top: 10px;
+    > p {
       display: none;
     }
   }
