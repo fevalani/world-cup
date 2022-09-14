@@ -149,7 +149,7 @@ const Title = styled.div`
 `;
 
 const Container = styled.div`
-  width: 80%;
+  width: 100%;
   height: 800px;
 
   padding: 0 40px 0;
@@ -289,6 +289,22 @@ const Final = styled.div`
         width: 150px;
         height: 90px;
       }
+    }
+  }
+
+  @media (max-width: 478px) {
+    width: 100%;
+    height: 100%;
+
+    flex-direction: column;
+    > img {
+      height: 200px;
+      width: 110px;
+    }
+    > div {
+      width: 100%;
+      height: 50%;
+      justify-content: space-evenly;
     }
   }
 `;

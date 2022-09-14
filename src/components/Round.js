@@ -168,7 +168,7 @@ const Container = styled.div`
     margin: 0;
   }
   @media (max-width: 768px) {
-    height: 140px;
+    height: 145px;
     width: 100px;
   }
 `;

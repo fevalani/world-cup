@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import GroupGrid from "./components/GroupGrid";
 import Keying from "./components/Keying";
@@ -30,9 +30,9 @@ export default function App() {
       }
     }
     if (counter === 8) {
-      if (window.innerWidth < 768) {
-        setTimeout(() => window.scrollTo(0, 600), 2321);
-      } else {
+      if (468 < window.innerWidth < 768) {
+        setTimeout(() => window.scrollTo(0, 2321), 500);
+      } else if (window) {
         setTimeout(() => window.scrollTo(0, 600), 500);
       }
       return true;
