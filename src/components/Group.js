@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useState } from "react";
 
-export default function Group({ name, group, setClassified, classified }) {
+export default function Group({ focus, name, group, setClassified, classified }) {
   const [places, setPlaces] = useState([]);
 
   function changePlaces(team, i) {
@@ -37,8 +37,8 @@ export default function Group({ name, group, setClassified, classified }) {
   }
 
   return (
-    <Container>
-      <div>Grupo {name}</div>
+    <Container focus={focus}>
+      <div>{window.innerWidth < 468 ? "" : "Grupos " + name}</div>
 
       {Object.keys(group).map((index, i) => (
         <Position
@@ -63,7 +63,7 @@ const Container = styled.div`
   height: 230px;
   padding-bottom: 10px;
 
-  display: flex;
+  display: ${(props) => (props.focus ? "flex" : "none")};
   align-items: center;
   justify-content: space-around;
   flex-direction: column;

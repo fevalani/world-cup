@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import GroupGrid from "./components/GroupGrid";
 import Keying from "./components/Keying";
-import background from "./assets/images/background.jpg";
 import logo from "./assets/images/logo.png";
 import cuplogo from "./assets/images/cuplogo.png";
 
@@ -30,11 +29,7 @@ export default function App() {
       }
     }
     if (counter === 8) {
-      if (468 < window.innerWidth < 768) {
-        setTimeout(() => window.scrollTo(0, 2321), 500);
-      } else if (window) {
-        setTimeout(() => window.scrollTo(0, 600), 500);
-      }
+      setTimeout(() => window.scrollTo(0, 300), 500);
       return true;
     } else {
       return false;
@@ -42,7 +37,7 @@ export default function App() {
   }
 
   return (
-    <Container background={background} classifyTeamIsComplete={classifyTeamIsComplete}>
+    <Container>
       <Logos>
         <img id="image" src={cuplogo} alt="logo" />
         <img id="image" src={logo} alt="logo" />
@@ -84,7 +79,7 @@ const Logos = styled.div`
   }
   @media (max-width: 768px) {
     img {
-      width: 150px;
+      width: 145px;
     }
   }
 `;
