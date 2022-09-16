@@ -20,7 +20,7 @@ export default function GroupGrid({ setClassified, classified, classifyTeamIsCom
     display: "block",
   }));
   const bind = useDrag(({ active, movement: [mx], direction: [xDir], cancel }) => {
-    if (active && Math.abs(mx) > width / 2) {
+    if (active && Math.abs(mx) > width / 3) {
       index.current = clamp(index.current + (xDir > 0 ? -1 : 1), 0, groupsArray.length - 1);
       setGroupSelected(groupsArray[index.current]);
       cancel();
@@ -94,14 +94,15 @@ export default function GroupGrid({ setClassified, classified, classifyTeamIsCom
 const Wrapper = styled.div`
   position: absolute;
   width: 100%;
-  height: 240px;
+  height: 260px;
   overflow: hidden;
 
   .page {
     position: absolute;
     width: 100%;
     touch-action: none;
-    transition: 0.2s;
+    transition: 0.1s;
+    padding: 10px 0;
     padding-left: 18vw;
   }
 `;
