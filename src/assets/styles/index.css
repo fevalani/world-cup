@@ -13,7 +13,7 @@ body {
       rgba(0, 0, 0, 1) 100%
     );
   background-repeat: repeat-x, no-repeat;
-  background-size: 100% 360px, contain;
+  background-size: 100vw 40vh, contain;
   background-position: fixed, center;
   background-attachment: fixed, fixed;
   transform: rotate(30);

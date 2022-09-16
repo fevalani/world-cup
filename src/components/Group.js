@@ -38,7 +38,7 @@ export default function Group({ focus, name, group, setClassified, classified })
 
   return (
     <Container focus={focus}>
-      <div>{window.innerWidth < 468 ? "" : "Grupos " + name}</div>
+      <div>{"Grupo " + name}</div>
 
       {Object.keys(group).map((index, i) => (
         <Position
