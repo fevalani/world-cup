@@ -61,6 +61,7 @@ const Container = styled.div`
   align-items: center;
 
   color: white;
+  overflow-x: hidden;
 `;
 
 const Logos = styled.div`

@@ -1,7 +1,14 @@
 import styled from "styled-components";
 import { useState } from "react";
 
-export default function Group({ focus, name, group, setClassified, classified }) {
+export default function Group({
+  focus,
+  name,
+  group,
+  setClassified,
+  classified,
+  classifyTeamIsComplete,
+}) {
   const [places, setPlaces] = useState([]);
 
   function changePlaces(team, i) {
@@ -42,6 +49,7 @@ export default function Group({ focus, name, group, setClassified, classified })
 
       {Object.keys(group).map((index, i) => (
         <Position
+          classifyTeamIsComplete={classifyTeamIsComplete}
           key={i}
           onClick={() => changePlaces(group[index].name, index)}
           exists={places.includes(group[index].name)}
@@ -86,6 +94,8 @@ const Position = styled.div`
   padding: 0 10px;
 
   background-color: rgba(100, 100, 100, 0.5);
+
+  pointer-events: ${(props) => (props.classifyTeamIsComplete ? "none" : "auto")};
 
   border: 3px solid
     rgba(

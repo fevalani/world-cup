@@ -34,7 +34,7 @@ export default function GroupGrid({ setClassified, classified, classifyTeamIsCom
   });
 
   return (
-    <Margin classifyTeamIsComplete={classifyTeamIsComplete}>
+    <Margin>
       <Title>Selecione os 1ᵒˢ, 2ᵒˢ e 3ᵒˢ colocados</Title>
       {window.innerWidth < 468 ? (
         <GroupsBarContainer>
@@ -63,6 +63,7 @@ export default function GroupGrid({ setClassified, classified, classifyTeamIsCom
               return (
                 <animated.div className={"page"} {...bind()} key={i} style={{ display, x }}>
                   <Group
+                    classifyTeamIsComplete={classifyTeamIsComplete}
                     focus={window.innerWidth < 478 ? groupSelected === groupsArray[i] : true}
                     key={i}
                     name={groupsArray[i]}
@@ -157,8 +158,6 @@ const Margin = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  pointer-events: ${(props) => (props.classifyTeamIsComplete ? "none" : "auto")};
 
   @media (max-width: 768px) {
     width: 100%;
