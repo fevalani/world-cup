@@ -22,7 +22,7 @@ export default function GroupGrid({ setClassified, classified, classifyTeamIsCom
     };
   });
   const bind = useDrag(({ active, movement: [mx], direction: [xDir], cancel }) => {
-    if (active && Math.abs(mx) > width / 3) {
+    if (active && Math.abs(mx) > width) {
       index.current = clamp(index.current + (xDir > 0 ? -1 : 1), 0, groupsArray.length - 1);
       setGroupSelected(groupsArray[index.current]);
       cancel();
@@ -44,11 +44,7 @@ export default function GroupGrid({ setClassified, classified, classifyTeamIsCom
           <GroupsBar classifyTeamIsComplete={classifyTeamIsComplete}>
             {groupsArray.map((group, i) => {
               return (
-                <GroupButton
-                  groupSelected={groupSelected === group}
-                  key={i}
-                  //onClick={() => setGroupSelected(group)}
-                >
+                <GroupButton groupSelected={groupSelected === group} key={i}>
                   {group}
                 </GroupButton>
               );
