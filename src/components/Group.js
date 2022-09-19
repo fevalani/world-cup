@@ -71,7 +71,7 @@ const Container = styled.div`
   height: 230px;
   padding-bottom: 10px;
 
-  display: ${(props) => (props.focus ? "flex" : "none")};
+  display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;

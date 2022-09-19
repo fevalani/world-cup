@@ -11,14 +11,16 @@ export default function GroupGrid({ setClassified, classified, classifyTeamIsCom
   const groupsArray = Object.keys(groups);
   const [groupSelected, setGroupSelected] = useState("A");
 
-  const index = useRef(0);
+  const index = useRef(groupsArray.indexOf(groupSelected));
   const width = window.innerWidth;
 
-  const [props, api] = useSprings(groupsArray.length, (i) => ({
-    x: i * width,
-    scale: 1,
-    display: "block",
-  }));
+  const [props, api] = useSprings(groupsArray.length, (i) => {
+    return {
+      x: i * width,
+      scale: 1,
+      display: "block",
+    };
+  });
   const bind = useDrag(({ active, movement: [mx], direction: [xDir], cancel }) => {
     if (active && Math.abs(mx) > width / 3) {
       index.current = clamp(index.current + (xDir > 0 ? -1 : 1), 0, groupsArray.length - 1);
@@ -45,7 +47,7 @@ export default function GroupGrid({ setClassified, classified, classifyTeamIsCom
                 <GroupButton
                   groupSelected={groupSelected === group}
                   key={i}
-                  //  onClick={() => setGroupSelected(group)}
+                  //onClick={() => setGroupSelected(group)}
                 >
                   {group}
                 </GroupButton>
