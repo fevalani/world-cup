@@ -172,6 +172,7 @@ const Container = styled.div`
     width: 90%;
     height: 100%;
     display: block;
+    transition: display 2s rotate 2s;
   }
 `;
 

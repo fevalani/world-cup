@@ -44,7 +44,13 @@ export default function GroupGrid({ setClassified, classified, classifyTeamIsCom
           <GroupsBar classifyTeamIsComplete={classifyTeamIsComplete}>
             {groupsArray.map((group, i) => {
               return (
-                <GroupButton groupSelected={groupSelected === group} key={i}>
+                <GroupButton
+                  groupSelected={groupSelected === group}
+                  key={i}
+                  onClick={() => {
+                    setGroupSelected(group);
+                  }}
+                >
                   {group}
                 </GroupButton>
               );
