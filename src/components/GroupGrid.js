@@ -22,7 +22,7 @@ export default function GroupGrid({ setClassified, classified, classifyTeamIsCom
     };
   });
   const bind = useDrag(({ active, movement: [mx], direction: [xDir], cancel }) => {
-    if (active && Math.abs(mx) > width) {
+    if (active && Math.abs(mx) > (2 / 3) * width) {
       index.current = clamp(index.current + (xDir > 0 ? -1 : 1), 0, groupsArray.length - 1);
       setGroupSelected(groupsArray[index.current]);
       cancel();
