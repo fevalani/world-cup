@@ -47,9 +47,9 @@ export default function GroupGrid({ setClassified, classified, classifyTeamIsCom
                 <GroupButton
                   groupSelected={groupSelected === group}
                   key={i}
-                  onClick={() => {
-                    setGroupSelected(group);
-                  }}
+                  //  onClick={() => {
+                  //    setGroupSelected(group);
+                  //  }}
                 >
                   {group}
                 </GroupButton>
@@ -107,7 +107,7 @@ const Wrapper = styled.div`
     width: 100%;
     touch-action: none;
     transition: 0.1s;
-    padding: 10px 0;
+    padding: 15px 0;
     padding-left: 18vw;
   }
 `;
