@@ -106,9 +106,9 @@ const Wrapper = styled.div`
     position: absolute;
     width: 100%;
     touch-action: none;
-    transition: 0.1s;
     padding: 15px 0;
     padding-left: 18vw;
+    transition: 0.05s;
   }
 `;
 
