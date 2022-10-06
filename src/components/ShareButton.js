@@ -23,8 +23,8 @@ async function testWebShare({ text, files: filesUrl }) {
   // Handle file urls
   if (filesUrl && filesUrl.length > 0) {
     const filesGetter = filesUrl.map((file) => urlToObject(file));
-    alert(filesGetter);
     const newFiles = await Promise.all(filesGetter);
+    alert(newFiles);
 
     if (!navigator.canShare || !navigator.canShare({ files: newFiles })) {
       handleShareError("Unsupported share feature");
