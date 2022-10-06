@@ -51,8 +51,8 @@ ShareButton.propTypes = {
 };
 
 ShareButton.defaultProps = {
-  text: "Capa Liberta",
-  files: ["https://cdp-media.lancecorp.com.br/phrases/c20e887ca233e6e5efebe06039a5f858.png"],
+  text: null,
+  files: null,
 };
 
 export default ShareButton;
