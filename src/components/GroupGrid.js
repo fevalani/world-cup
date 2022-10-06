@@ -21,8 +21,9 @@ export default function GroupGrid({ setClassified, classified, classifyTeamIsCom
       display: "block",
     };
   });
-  const bind = useDrag(({ active, movement: [mx], direction: [xDir], cancel }) => {
+  const bind = useDrag(({ active, movement: [mx], direction: [xDir], cancel, tap }) => {
     if (active && Math.abs(mx) > (2 / 3) * width) {
+      console.log(tap);
       index.current = clamp(index.current + (xDir > 0 ? -1 : 1), 0, groupsArray.length - 1);
       setGroupSelected(groupsArray[index.current]);
       cancel();
@@ -37,10 +38,13 @@ export default function GroupGrid({ setClassified, classified, classifyTeamIsCom
 
   return (
     <Margin>
-      <Title>Selecione os 1ᵒˢ, 2ᵒˢ e 3ᵒˢ colocados</Title>
-      {window.innerWidth < 468 ? (
+      <Title>
+        Selecione os 1ᵒˢ, 2ᵒˢ e 3ᵒˢ colocados
+        {window.innerWidth < 468 ? <p>Grupos:</p> : " "}
+      </Title>
+
+      {/*{window.innerWidth < 468 ? (
         <GroupsBarContainer>
-          <p>Grupos:</p>
           <GroupsBar classifyTeamIsComplete={classifyTeamIsComplete}>
             {groupsArray.map((group, i) => {
               return (
@@ -59,7 +63,7 @@ export default function GroupGrid({ setClassified, classified, classifyTeamIsCom
         </GroupsBarContainer>
       ) : (
         ""
-      )}
+      )}*/}
       <Container>
         {window.innerWidth < 468 ? (
           <Wrapper>
@@ -106,7 +110,6 @@ const Wrapper = styled.div`
     position: absolute;
     width: 100%;
     touch-action: none;
-    padding: 15px 0;
     padding-left: 18vw;
     transition: 0.05s;
   }
@@ -173,6 +176,8 @@ const Margin = styled.div`
 const Title = styled.div`
   font-size: 20px;
   font-weight: bold;
+  margin-bottom: 0;
+
   @media (max-width: 768px) {
     font-size: 18px;
   }

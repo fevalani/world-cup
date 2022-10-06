@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useState } from "react";
+import ShareButton from "./components/ShareButton";
 
 import GroupGrid from "./components/GroupGrid";
 import Keying from "./components/Keying";
@@ -38,6 +39,7 @@ export default function App() {
 
   return (
     <Container>
+      <ShareButton />
       <Logos>
         <img id="image" src={cuplogo} alt="logo" />
         <img id="image" src={logo} alt="logo" />
