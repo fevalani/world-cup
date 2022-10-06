@@ -42,7 +42,14 @@ async function testWebShare({ text, files: filesUrl }) {
 }
 
 const ShareButton = ({ ...props }) => {
-  return <button onClick={() => testWebShare(props)} />;
+  return (
+    <button
+      onClick={() => {
+        testWebShare(props);
+        console.log(props);
+      }}
+    />
+  );
 };
 
 ShareButton.propTypes = {
