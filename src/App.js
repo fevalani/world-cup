@@ -39,7 +39,10 @@ export default function App() {
 
   return (
     <Container>
-      <ShareButton />
+      <ShareButton
+        text="Capa Liberta"
+        files="https://cdp-media.lancecorp.com.br/phrases/c20e887ca233e6e5efebe06039a5f858.png"
+      />
       <Logos>
         <img id="image" src={cuplogo} alt="logo" />
         <img id="image" src={logo} alt="logo" />
